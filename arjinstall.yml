@@ -1,0 +1,24 @@
+- hosts:
+    - all
+  vars_files:
+    - ./group_vars/password.yml
+
+  tasks:
+    - name: install arh and nano
+      apt: pkg="{{ item }}" state=latest
+      with_items:
+        - zip
+        - unzip
+        - gzip
+        - nano
+      tags:
+      - install
+
+    - name: remove unzip, nano
+      apt: pkg="{{ item }}" state=removed
+      with_items:
+        - unzip
+        - nano
+      tags:
+      - remove
+

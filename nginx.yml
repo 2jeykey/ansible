@@ -1,0 +1,18 @@
+- hosts:
+    - all
+  vars_files:
+    - ./group_vars/password.yml
+  tasks:
+    - name: ensure package cache is up to date
+      apt: update_cache=yes cache_valid_time=3600
+      tags: install
+    - name: install nginx
+      apt: pkg=nginx state=present
+      tags: install
+      notify: nginx startup
+      notify: restart nginx
+  handlers:
+    - name: nginx startup
+      service: name=nginx enabled=yes
+    - name: restart nginx
+      service: name=nginx state=restarted 

@@ -1,0 +1,15 @@
+    1  set |grep python
+    2  set
+    3  whereis python3
+    4  cd /usr/bin/python3
+    5  cd /usr/bin/
+    6  ls
+    7  python3 -v
+    8  python3 -V
+    9  sudo apt update
+   10  sudo apt upgrade
+   11  sudo reboot
+   12  sudo apt-get update
+   13  hostname -I
+   14  cd ansible/
+   15  history >hist.txt

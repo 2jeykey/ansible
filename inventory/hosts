@@ -1,0 +1,11 @@
+[group_name]
+alias ansible_ssh_host=192.168.10.128 ansible_user=deployer
+
+[servers]
+deployer1 ansible_ssh_host=192.168.10.61 ansible_user=deployer
+deployer2 ansible_ssh_host=192.168.10.62 ansible_user=deployer
+
+
+
+
+
