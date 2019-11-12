@@ -1,0 +1,16 @@
+PLAY [all] *************************************************************************************************************************************************************
+
+TASK [Gathering Facts] *************************************************************************************************************************************************
+ok: [node2]
+ok: [node1]
+ok: [alias]
+
+TASK [install arh and nano] ********************************************************************************************************************************************
+changed: [alias] => (item=[u'zip', u'unzip', u'gzip', u'nano'])
+changed: [node2] => (item=[u'zip', u'unzip', u'gzip', u'nano'])
+changed: [node1] => (item=[u'zip', u'unzip', u'gzip', u'nano'])
+
+PLAY RECAP *************************************************************************************************************************************************************
+alias                      : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+node1                      : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+node2                      : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
